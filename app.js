@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express      = require('express');
 const path         = require('path');
 const favicon      = require('serve-favicon');
@@ -8,7 +9,7 @@ const layouts      = require('express-ejs-layouts');
 const mongoose     = require('mongoose');
 
 
-mongoose.connect('mongodb://localhost/landing-page');
+mongoose.connect(process.env.MONGO_URI);
 
 const app = express();
 
