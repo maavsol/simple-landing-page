@@ -16,12 +16,12 @@ $(document).ready(function() {
       type: "POST",
       data: { email: value }
     });
-    $(".content-form").append(
-      "<b class='message'style='margin: 30px 30px 30px 0; color: red'>Email received. We'll get back to you shortly. Thank you</b>"
+    $(".submit-button").html(
+      'GRACIAS!'
     );
 
     setTimeout(()=>{
-      $('.message').remove()
+      $('.submit-button').html('QUIERO SABER MÁS')
     }, 2000)
   });
 });

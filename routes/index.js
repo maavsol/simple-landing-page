@@ -12,10 +12,6 @@ router.post('/sendEmail', (req, res, next) => {
   const { email } = req.body
   const newEmail = new Email({email: email})
   newEmail.save()
-    .then((savedEmail) => {
-      res.render('index', { savedEmail })
-    })
-    .catch(e => {console.log(e)})
 })
 
 module.exports = router;
